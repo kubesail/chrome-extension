@@ -1,0 +1,15 @@
+{
+  "name": "KubeSail",
+  "version": "1.0",
+  "description": "Apply Kubernetes conigurations on KubeSail from around the web!",
+  "permissions": ["activeTab", "<all_urls>"],
+  "manifest_version": 2,
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["inject.js"],
+      "css": ["inject.css"]
+    }
+  ],
+  "homepage_url": "https://kubesail.com"
+}
