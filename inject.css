@@ -2,7 +2,7 @@
   position: relative;
 }
 
-.kubesail-apply:before {
+.kubesail-apply-button {
   position: absolute;
   top: 10px;
   right: 10px;
@@ -13,8 +13,9 @@
   font-family: Arial, Helvetica, sans-serif;
   cursor: pointer;
   font-size: 16px;
+  transition: background-color 400ms;
 }
 
-.kubesail-apply:before:hover {
+.kubesail-apply-button:hover {
   background-color: #1f8cb4;
 }

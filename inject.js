@@ -10,9 +10,16 @@
       lines[1] &&
       lines[1].startsWith('kind: ')
     ) {
-      console.log(pre.innerText)
-      console.log(pre)
-      pre.classList.add('kubesail-apply')
+      const wrapper = document.createElement('div')
+      wrapper.classList.add('kubesail-apply')
+      pre.parentNode.insertBefore(wrapper, pre)
+      wrapper.appendChild(pre)
+      const a = document.createElement('a')
+      a.classList.add('kubesail-apply-button')
+      a.href = `https://kubesail.com/template?source=${encodeURIComponent(pre.innerText)}`
+      a.innerText = 'Apply on KubeSail'
+      a.target = '_blank'
+      wrapper.appendChild(a)
     }
   })
 })()
